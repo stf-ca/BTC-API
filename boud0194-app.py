@@ -18,8 +18,12 @@ def showUsd():
     print(time,code,rate)
 
 def showGbp():
-    #Your code will go here, remove the pass once you are done editing your code
-    pass
+    response = requests.get(url)
+    jsonResponse = response.json()
+    time = jsonResponse["time"]["updated"]
+    code = jsonResponse["bpi"]["GBP"]["code"]
+    rate = jsonResponse["bpi"]["GBP"]["rate"]
+    print(time,code,rate)
 
 def showEuro():
     #Your code will go here, remove the pass once you are done editing your code
