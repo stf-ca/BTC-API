@@ -26,8 +26,12 @@ def showGbp():
     print(time,code,rate)
 
 def showEuro():
-    #Your code will go here, remove the pass once you are done editing your code
-    pass
+    response = requests.get(url)
+    jsonResponse = response.json()
+    time = jsonResponse["time"]["updated"]
+    code = jsonResponse["bpi"]["EUR"]["code"]
+    rate = jsonResponse["bpi"]["EUR"]["rate"]
+    print(time,code,rate)
 
 while True:
     try:
