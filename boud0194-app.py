@@ -2,7 +2,7 @@ import requests
 
 
 # This scripts is getting data from CoinDesk API
-# https://github.com/StefanBoudriau/Assign3.git
+# https://github.com/
 
 url = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
